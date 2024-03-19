@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="calculadora.js"></script>
+    <link rel="shortcut icon" href="imagenes/icono.png" type="image/x-icon">
+
+</head>
+<body>
+    <header>
+        <h1 id="tituloCalculadora">CALCULADORA</h1>
+        <button id="oscuro">Oscuro</button>
+    </header>
+    <main>
+        <div>
+            <section id="pantalla">
+                <button onclick="borrar()" id="botonBorrarCalcu">Borrar</button>
+                <h1 id="numeros"></h1>
+            </section>
+            <section>
+                <ul>
+                    <li><button onclick="ingresar(7)" class="botonCalculadora">7</button>
+                        <button onclick="ingresar(8)" class="botonCalculadora">8</button>
+                        <button onclick="ingresar(9)" class="botonCalculadora">9</button>
+                        <button onclick="ingresar('/')" class="botonCalculadora">%</button></li>
+                    <li><button onclick="ingresar(4)" class="botonCalculadora">4</button>
+                        <button onclick="ingresar(5)" class="botonCalculadora">5</button>
+                        <button onclick="ingresar(6)" class="botonCalculadora">6</button>
+                        <button onclick="ingresar('*')" class="botonCalculadora">x</button></li>
+                    <li><button onclick="ingresar(1)" class="botonCalculadora">1</button>
+                        <button onclick="ingresar(2)" class="botonCalculadora">2</button>
+                        <button onclick="ingresar(3)" class="botonCalculadora">3</button>
+                        <button onclick="ingresar('-')" class="botonCalculadora">-</button></li>
+                    <li><button onclick="ingresar('.')" class="botonCalculadora">,</button>
+                        <button onclick="ingresar(0)" class="botonCalculadora">0</button>
+                        <button onclick="ingresar('=')" class="botonCalculadora">=</button>
+                        <button onclick="ingresar('+')" class="botonCalculadora">+</button></li>
+                </ul>
+            </section>
+        </div>
+        <div class="historial">
+            <section class="historial">
+                <h3 id="tituloHistorial">Historial</h3>
+                <button onclick="borrarHistrial(this)" id="botonBorrar"><img src="imagenes/basura.png" alt="" id="imgBorrar"></button>
+            </section>
+            <section>
+
+            </section>
+        </div>
+    </main>
+</body>
+</html>

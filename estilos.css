@@ -1,0 +1,166 @@
+@font-face {
+    font-family: 'Calculator';
+    src: url('Calculator.ttf') format('truetype');
+}
+*{
+    font-family: 'Calculator'
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    padding: 20px;
+}
+body{
+    background-color: rgb(149, 182, 182);
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
+    max-width: 64rem;
+    margin: auto;
+    border: 2px solid #535353;
+    border-radius: 10px;
+    padding: 20px; 
+}
+.historial{  
+    display: grid;
+    grid-template-columns: 1fr 2fr auto;
+    grid-template-rows: auto 1fr 2fr;
+    align-items: center;
+    justify-items: start;
+}
+.historial #imgBorrar{
+    height: 20px;
+    width: 20px;
+}
+.historial #botonBorrar{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.historial #tituloHistorial{   
+    text-align: center;
+    
+}
+section ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px;
+    padding: 0; /*cambia dependiendo*/
+    list-style: none;
+}
+section ul li {
+display: contents; /* preguntar al profe*/
+}
+
+.botonCalculadora {
+width: 100%;
+height: 100%;
+padding: 10px;
+font-size: 2rem;
+border: none; 
+cursor: pointer;
+border-radius: 5px; 
+background-color: #fff;
+color: #555;
+}
+
+section ul li button:active {
+background-color:black;
+}
+
+#pantalla{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+}
+#botonBorrarCalcu{
+    width: 4rem;
+    height: 2rem;
+    padding: 10px;
+    font-size: 1rem;
+    border: none; 
+    cursor: pointer;
+    background-color:#5c88da;
+    border-radius: 5px; 
+    color: #555;
+    
+}
+#oscuro{
+    width: 4rem;
+    height: 2rem;
+    padding: 10px;
+    font-size: 1rem;
+    border: none; 
+    cursor: pointer;
+    background-color:#555;
+    border-radius: 5px;
+    color: #fff;
+}
+#tituloCalculadora{
+    margin-right: 0%;
+}
+.modo-oscuro {
+    background-color: #333;
+    color: #fff;
+}
+
+.modo-oscuro .botonCalculadora {
+    background-color: #555;
+    color: #fff;
+}
+.modo-oscuro #botonBorrarCalcu {
+    background-color: #5c88da;
+    color: #fff;
+}
+.modo-oscuro #oscuro {
+    background-color: #fff;
+    color: #555;
+}
+/*Hover botones*/
+.botonCalculadora:hover {
+    background-color: #e0e0e0; 
+    transform: translateY(-2px); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+#oscuro:hover {
+    transform: scale(1.1); /*aumenta tamaño*/
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;   
+}
+#botonBorrarCalcu:hover{
+    background-color:#1b2436; 
+    color: #ffffff; 
+    transform: scale(1.1); /*aumenta tamaño*/
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+.modo-oscuro #botonBorrarCalcu:hover {
+    background-color: #1b2436; 
+    color: #ffffff; 
+    transform: scale(1.1); /*aumenta tamaño*/
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+.modo-oscuro .botonCalculadora:hover {
+    background-color: #8f8f8f; 
+    transform: translateY(-2px); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+.historial #botonBorrar:hover {
+    transform: rotate(45deg); 
+    transition: transform 0.2s;
+}
+
+/*Media query*/
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) {
+    main {
+        grid-template-columns: minmax(24rem, 32rem) 1fr;
+    }
+}
